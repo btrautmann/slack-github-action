@@ -1,8 +1,8 @@
 name: Notify Slack
 on:
-  push:
-    branches:
-      - brandon/testing-notifs
+#  push:
+#    branches:
+#      - brandon/testing-notifs
   workflow_call:
     inputs:
       message:
