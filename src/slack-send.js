@@ -99,7 +99,7 @@ module.exports = async function slackSend(core) {
       }
 
       try {
-        await axios.post(webhookUrl, payload)
+        axios.post(webhookUrl, payload)
           .then(function (response) {
             throw new Error(response);
           })
