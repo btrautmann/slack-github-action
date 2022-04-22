@@ -4,10 +4,10 @@ on:
 #    branches:
 #      - brandon/testing-notifs
   workflow_call:
-    inputs:
-      message:
-        type: string
-        required: true
+#    inputs:
+#      message:
+#        type: string
+#        required: true
 
 jobs:
   notify:
