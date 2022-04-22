@@ -4,6 +4,6 @@ on:
 
 jobs:
   notify_slack:
-    uses: btrautmann/slack-github-action/.github/workflows/test.yaml@brandon/testing-notifs
+    uses: btrautmann/slack-github-action/.github/workflows/test.yaml@main
     with:
       message: "Hello, World"
