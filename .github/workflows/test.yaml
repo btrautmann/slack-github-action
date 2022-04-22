@@ -18,7 +18,7 @@ jobs:
       with:
         payload: |
           {
-            "message": "${{ inputs.message }}"
+            "message": "Testing"
           }
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_MOBILE_RELEASE_TRAIN_WEBHOOK }}
