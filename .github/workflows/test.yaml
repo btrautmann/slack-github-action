@@ -1,0 +1,25 @@
+name: Notify Slack
+on:
+  push:
+    branches:
+      - brandon/testing-notifs
+  workflow_call:
+    inputs:
+      message:
+        type: string
+        required: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send a message to Mobile Release Train Webhook
+      uses: slackapi/slack-github-action@v1.18.0
+      with:
+        payload: |
+          {
+            "message": "${{ inputs.message }}"
+          }
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_MOBILE_RELEASE_TRAIN_WEBHOOK }}
+
