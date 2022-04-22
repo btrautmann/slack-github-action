@@ -28,6 +28,7 @@ module.exports = async function slackSend(core) {
     }
 
     let payload = core.getInput('payload');
+    console.log(`payload is ${payload}`);
 
     const payloadFilePath = core.getInput('payload-file-path');
 
@@ -76,6 +77,7 @@ module.exports = async function slackSend(core) {
     }
 
     if (typeof webhookUrl !== 'undefined' && webhookUrl.length > 0) {
+      console.log(`webhookUrl is ${webhookUrl}`);
       if (!payload) {
         // No Payload was passed in
         console.log('no custom payload was passed in, using default payload that triggered the GitHub Action');
@@ -112,6 +114,7 @@ module.exports = async function slackSend(core) {
       }
     }
 
+    console.log(`finished!`);
     const time = (new Date()).toTimeString();
     core.setOutput('time', time);
   } catch (error) {
