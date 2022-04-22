@@ -1,0 +1,7 @@
+name: Root
+on:
+  workflow_dispatch:
+
+jobs:
+  notify_slack:
+    uses: btrautmann/slack-github-action/.github/workflows/notify.yaml@main
