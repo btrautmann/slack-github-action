@@ -99,13 +99,7 @@ module.exports = async function slackSend(core) {
       }
 
       try {
-        await axios.post(webhookUrl, payload)
-          .then(function (response) {
-            throw new Error(response);
-          })
-          .catch(function (error) {
-            throw new Error(error);
-          });
+        await axios.post(webhookUrl, payload);
       } catch (err) {
         console.log('axios post failed, double check the payload being sent includes the keys Slack expects');
         console.log(payload);
