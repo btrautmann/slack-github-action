@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Send a message to Mobile Release Train Webhook
-      uses: btrautmann/slack-github-action@v1.19
+      uses: btrautmann/slack-github-action@v1.18
       with:
         payload: |
           {
